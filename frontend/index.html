@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Quote App</title>
+  <script defer src="index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    textarea {
+      resize: none;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen flex items-center justify-center px-4">
+
+  <div class="w-full max-w-xl bg-gray-850 p-8 rounded-2xl shadow-2xl ring-1 ring-white/10 space-y-8">
+    
+    <header class="text-center">
+      <h1 class="text-4xl font-extrabold tracking-tight mb-2">📜 Random Quote</h1>
+      <p class="text-gray-400 text-sm">Inspire yourself with a single click</p>
+    </header>
+
+    <div id="quote-box" class="p-6 bg-gray-800 rounded-xl transition-all duration-300 shadow-inner">
+      <p id="quote-text" class="text-xl italic leading-relaxed mb-4">Loading...</p>
+      <p id="quote-author" class="text-right text-sm text-gray-400">–</p>
+    </div>
+
+    <div class="text-center">
+      <button id="refresh-btn"
+        class="bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-2 text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+        🔁 New Quote
+      </button>
+    </div>
+
+    <form id="quote-form" class="space-y-4">
+      <div>
+        <label for="author" class="sr-only">Author</label>
+        <input name="author" type="text" placeholder="Author" required
+          class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500" />
+      </div>
+      <div>
+        <label for="text" class="sr-only">Quote Text</label>
+        <textarea name="text" placeholder="Quote text..." required rows="3"
+          class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit"
+          class="bg-green-600 hover:bg-green-700 transition-colors px-6 py-2 text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2">
+          ➕ Add Quote
+        </button>
+      </div>
+    </form>
+
+    <p id="form-status" class="mt-4 text-sm text-green-400 text-center hidden">✅ Quote added!</p>
+  </div>
+
+</body>
+</html>
